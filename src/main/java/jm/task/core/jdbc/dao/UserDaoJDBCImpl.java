@@ -10,7 +10,6 @@ public class UserDaoJDBCImpl implements UserDao {
     }
 
     public void createUsersTable() {
-
     }
 
     public void dropUsersTable() {
