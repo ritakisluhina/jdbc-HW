@@ -1,5 +1,6 @@
 package jm.task.core.jdbc;
 
+import jm.task.core.jdbc.dao.UserDaoJDBCImpl;
 import jm.task.core.jdbc.model.User;
 import jm.task.core.jdbc.service.UserServiceImpl;
 
@@ -15,7 +16,7 @@ public class Main {
         User userTwo = new User("Rita", "Kiss", (byte) 27);
         User userThree = new User("Bob", "Black", (byte) 48);
         User userFour = new User("Alice", "Wonder", (byte) 21);
-        UserServiceImpl myTable = new UserServiceImpl();
+        UserDaoJDBCImpl myTable = new UserDaoJDBCImpl();
         myTable.createUsersTable();
         myTable.saveUser(userOne.getName(), userOne.getLastName(), userOne.getAge());
         System.out.println("User с именем – " + userOne.getName() + " добавлен в базу данных");
